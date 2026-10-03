@@ -33,3 +33,8 @@ pip install vieneu gradio pydub
 
 1. Mở PowerShell trong thư mục dự án.
 2. Kích hoạt môi trường ảo:
+   ```powershell
+   .\venv\Scripts\activate
+   ```
+3. Chạy ứng dụng:
+   ```powershell
