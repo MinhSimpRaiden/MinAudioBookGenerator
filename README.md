@@ -38,3 +38,8 @@ pip install vieneu gradio pydub
    ```
 3. Chạy ứng dụng:
    ```powershell
+   python app.py
+   ```
+4. Giao diện Web (Gradio) sẽ được mở lên ở trình duyệt: `http://127.0.0.1:7860`.
+5. Tải file truyện của bạn lên, chọn giọng đọc, số từ mỗi tập rồi bấm **🚀 Bắt đầu tạo Audiobook**.
+
