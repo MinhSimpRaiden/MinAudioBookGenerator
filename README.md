@@ -18,3 +18,8 @@ Dự án được xây dựng với Python, Gradio và bộ lõi **VieNeu-TTS** 
 ## Cách cài đặt
 
 Ứng dụng đang trong quá trình cài đặt tự động (file `install.ps1`). Nếu bạn muốn cài thủ công, mở Terminal/PowerShell tại thư mục này và chạy:
+
+```powershell
+python -m venv venv
+.\venv\Scripts\activate
+
