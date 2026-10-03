@@ -48,3 +48,8 @@ def split_text_into_episodes(text, words_per_episode):
         episodes.append(current_episode_paragraphs)
         
     return episodes
+
+def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=gr.Progress()):
+    if not tts:
+        return "Lỗi: Chưa khởi tạo được VieNeu TTS. Hãy kiểm tra lại môi trường (GPU, Torch)."
+        
