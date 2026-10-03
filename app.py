@@ -58,3 +58,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
         try:
             with open(file_obj.name, 'r', encoding='utf-8') as f:
                 text = f.read()
+        except Exception as e:
+            return f"Lỗi đọc file text: {e}"
+    elif text_input and text_input.strip():
+        text = text_input.strip()
+    else:
