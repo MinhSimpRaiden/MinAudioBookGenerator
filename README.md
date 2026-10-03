@@ -13,3 +13,8 @@ Dự án được xây dựng với Python, Gradio và bộ lõi **VieNeu-TTS** 
 - Hệ điều hành: Windows / macOS / Linux.
 - Có cài đặt **Python 3.9+**.
 - *(Khuyến nghị)* Card đồ hoạ (VGA) NVIDIA để sử dụng được PyTorch CUDA (giúp render nhanh gấp 10-20 lần so với CPU).
+- *(Tùy chọn)* **FFmpeg** để xuất file dưới định dạng `.mp3`. (Nếu không có FFmpeg, app sẽ tự động lưu dưới dạng `.wav`).
+
+## Cách cài đặt
+
+Ứng dụng đang trong quá trình cài đặt tự động (file `install.ps1`). Nếu bạn muốn cài thủ công, mở Terminal/PowerShell tại thư mục này và chạy:
