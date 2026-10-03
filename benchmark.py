@@ -18,3 +18,8 @@ try:
     audios = tts.infer_batch(texts, voice="Phạm Tuyên", batch_size=32)
     end_time = time.time()
 
+    elapsed_time = end_time - start_time
+    # Tính tổng thời lượng audio tạo ra
+    sample_rate = 48000
+    total_audio_samples = sum(len(a) for a in audios)
+    audio_duration = total_audio_samples / sample_rate
