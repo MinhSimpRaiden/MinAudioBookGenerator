@@ -68,3 +68,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
     if not text:
         return "Văn bản rỗng."
 
+    words_per_ep = int(words_per_ep)
+    progress(0, desc="Đang phân tích và chia tập...")
+    
+    episodes = split_text_into_episodes(text, words_per_ep)
+    total_episodes = len(episodes)
