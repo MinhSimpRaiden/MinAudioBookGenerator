@@ -18,3 +18,8 @@ try:
     print(f"Đã tải thành công {len(VOICE_CHOICES)} giọng đọc.")
 except Exception as e:
     print("Lỗi khi khởi tạo Vieneu:", e)
+    VOICE_CHOICES = [("Phạm Tuyên", "Phạm Tuyên"), ("Hải Đăng", "Hải Đăng"), ("Mai Anh", "Mai Anh")]
+    tts = None
+
+def split_text_into_episodes(text, words_per_episode):
+    """
