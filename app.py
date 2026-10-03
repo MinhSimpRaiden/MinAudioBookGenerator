@@ -103,3 +103,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
             final_audio = np.concatenate(ep_audios, axis=0)
             
             # Xuất ra file WAV
+            out_path_wav = os.path.join(output_dir, f"Tap_{ep_num:02d}.wav")
+            tts.save(final_audio, out_path_wav)
+            output_files.append(out_path_wav)
+            
+            # Thử convert sang MP3 nếu hệ thống có FFmpeg (thông qua pydub)
