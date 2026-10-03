@@ -8,3 +8,8 @@ Dự án được xây dựng với Python, Gradio và bộ lõi **VieNeu-TTS** 
 - Tự động nhận diện và chia nhỏ truyện thành nhiều tập (mỗi tập khoảng 2 tiếng đọc ~ 19.200 từ).
 - Chạy hoàn toàn dưới máy cá nhân (Local) để bảo vệ quyền riêng tư và không mất phí API.
 - Hỗ trợ GPU NVIDIA để render audio siêu tốc.
+
+## Yêu cầu hệ thống
+- Hệ điều hành: Windows / macOS / Linux.
+- Có cài đặt **Python 3.9+**.
+- *(Khuyến nghị)* Card đồ hoạ (VGA) NVIDIA để sử dụng được PyTorch CUDA (giúp render nhanh gấp 10-20 lần so với CPU).
