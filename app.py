@@ -88,3 +88,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
         ep_audios = []
         batch_size = 32
         
+        # Chia nhỏ số paragraph ra thành nhiều đợt để tránh OOM trên VRAM
+        for j in range(0, len(ep_paragraphs), batch_size):
+            batch = ep_paragraphs[j:j+batch_size]
+            try:
+                # Trả về list of np.ndarray
