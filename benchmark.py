@@ -23,3 +23,8 @@ try:
     sample_rate = 48000
     total_audio_samples = sum(len(a) for a in audios)
     audio_duration = total_audio_samples / sample_rate
+
+    rtf = elapsed_time / audio_duration
+    
+    print(f"\n[KẾT QUẢ BENCHMARK TRÊN MÁY BẠN]")
+    print(f"- Thời gian thực thi: {elapsed_time:.2f} giây")
