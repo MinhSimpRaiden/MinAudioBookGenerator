@@ -63,3 +63,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
     elif text_input and text_input.strip():
         text = text_input.strip()
     else:
+        return "Vui lòng tải lên file truyện hoặc nhập văn bản."
+
+    if not text:
+        return "Văn bản rỗng."
+
