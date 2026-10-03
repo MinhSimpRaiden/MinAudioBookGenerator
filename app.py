@@ -93,3 +93,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
             batch = ep_paragraphs[j:j+batch_size]
             try:
                 # Trả về list of np.ndarray
+                audios = tts.infer_batch(batch, voice=voice_name, batch_size=batch_size)
+                ep_audios.extend(audios)
+            except Exception as e:
+                return f"Lỗi khi tạo audio (Tập {ep_num}): {e}"
+        
