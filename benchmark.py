@@ -13,3 +13,8 @@ try:
     
     # Warm up (chạy thử 1 câu trước để GPU nạp graph, tránh tính thời gian khởi động ban đầu)
     tts.infer(sample_sentence, voice="Phạm Tuyên")
+    
+    start_time = time.time()
+    audios = tts.infer_batch(texts, voice="Phạm Tuyên", batch_size=32)
+    end_time = time.time()
+
