@@ -23,3 +23,8 @@ Dự án được xây dựng với Python, Gradio và bộ lõi **VieNeu-TTS** 
 python -m venv venv
 .\venv\Scripts\activate
 
+# Cài đặt PyTorch với CUDA 12.8 (hoặc phiên bản phù hợp)
+pip install torch==2.8.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128
+pip install transformers==4.57.6
+pip install vieneu gradio pydub
+```
