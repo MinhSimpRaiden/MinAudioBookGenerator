@@ -153,3 +153,6 @@ with gr.Blocks(title="MinAudioBook Generator") as app:
         inputs=[file_in, text_in, voice_sel, words_per_ep], 
         outputs=[out_msg]
     )
+    
+if __name__ == "__main__":
+    app.launch(server_name="0.0.0.0", server_port=7860, inbrowser=True)
