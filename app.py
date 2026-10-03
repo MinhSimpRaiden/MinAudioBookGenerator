@@ -33,3 +33,8 @@ def split_text_into_episodes(text, words_per_episode):
     current_episode_paragraphs = []
     current_word_count = 0
     
+    for p in paragraphs:
+        word_count = len(p.split())
+        # Nếu cộng thêm đoạn này mà vượt quá giới hạn và đã có nội dung trong tập hiện tại
+        if current_word_count + word_count > words_per_episode and current_episode_paragraphs:
+            episodes.append(current_episode_paragraphs)
