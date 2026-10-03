@@ -143,3 +143,8 @@ with gr.Blocks(title="MinAudioBook Generator") as app:
                 voice_sel = gr.Dropdown(choices=VOICE_CHOICES, value=VOICE_CHOICES[0][1] if VOICE_CHOICES else None, label="Chọn giọng đọc", interactive=True)
                 words_per_ep = gr.Number(value=48000, label="Số từ mỗi tập (~5 tiếng)", interactive=True)
                 
+            btn = gr.Button("🚀 Bắt đầu tạo Audiobook", variant="primary", size="lg")
+            
+        with gr.Column(scale=1):
+            out_msg = gr.Textbox(label="Trạng thái & Kết quả", lines=15, interactive=False)
+            
