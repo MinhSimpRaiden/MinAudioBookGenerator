@@ -98,3 +98,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
             except Exception as e:
                 return f"Lỗi khi tạo audio (Tập {ep_num}): {e}"
         
+        # Ghép nối các numpy array audio lại
+        if ep_audios and isinstance(ep_audios[0], np.ndarray):
+            final_audio = np.concatenate(ep_audios, axis=0)
+            
+            # Xuất ra file WAV
