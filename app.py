@@ -23,3 +23,8 @@ except Exception as e:
 
 def split_text_into_episodes(text, words_per_episode):
     """
+    Chia văn bản thành các tập dựa trên số từ ước tính.
+    Văn bản được tách theo đoạn (paragraph) để không bị đứt ngang câu.
+    """
+    # Tách văn bản thành các đoạn nhỏ
+    paragraphs = [p.strip() for p in text.split('\n') if p.strip()]
