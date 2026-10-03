@@ -33,3 +33,8 @@ try:
     print(f"- Tốc độ render: Nhanh gấp {1/rtf:.1f} lần tốc độ đọc của người thật")
 
     # Ước tính cho tập 5 tiếng (18000 giây)
+    estimated_time_5h = 18000 * rtf
+    print(f"\n=> ƯỚC TÍNH: 1 Tập (5 tiếng) sẽ tốn khoảng {estimated_time_5h / 60:.1f} phút để convert xong hoàn toàn.")
+    
+except Exception as e:
+    print(f"Lỗi khi chạy benchmark: {e}")
