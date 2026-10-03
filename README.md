@@ -43,3 +43,8 @@ pip install vieneu gradio pydub
 4. Giao diện Web (Gradio) sẽ được mở lên ở trình duyệt: `http://127.0.0.1:7860`.
 5. Tải file truyện của bạn lên, chọn giọng đọc, số từ mỗi tập rồi bấm **🚀 Bắt đầu tạo Audiobook**.
 
+## Lưu ý về dung lượng và định dạng (.mp3 vs .wav)
+Do file Audio kéo dài 2 tiếng có dung lượng khá lớn, hệ thống sẽ cố gắng chuyển đổi thành MP3 bằng thư viện `pydub`. Việc này yêu cầu máy tính của bạn phải có `ffmpeg`. 
+- Nếu có `ffmpeg`: File đầu ra sẽ là định dạng `.mp3` (vài chục MB/tập).
+- Nếu KHÔNG có `ffmpeg`: File đầu ra sẽ là định dạng `.wav` gốc (dung lượng có thể lên tới >600 MB/tập).
+*Cách cài ffmpeg:* Bạn có thể dùng `winget install ffmpeg` hoặc tải từ trang chủ và thêm vào biến môi trường PATH.
