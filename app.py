@@ -43,3 +43,8 @@ def split_text_into_episodes(text, words_per_episode):
         else:
             current_episode_paragraphs.append(p)
             current_word_count += word_count
+            
+    if current_episode_paragraphs:
+        episodes.append(current_episode_paragraphs)
+        
+    return episodes
