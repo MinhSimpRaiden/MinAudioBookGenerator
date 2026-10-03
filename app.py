@@ -118,3 +118,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
                 os.remove(out_path_wav)
             except Exception as e:
                 print(f"Không thể convert sang MP3 (có thể thiếu FFmpeg): {e}")
+        else:
+            return "Lỗi định dạng audio trả về từ VieNeu TTS."
+            
+    progress(1.0, desc="Hoàn tất!")
+    
