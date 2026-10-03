@@ -128,3 +128,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
         msg += f"- {f}\n"
         
     return msg
+
+# --- GIAO DIỆN GRADIO ---
+with gr.Blocks(title="MinAudioBook Generator") as app:
+    gr.Markdown("# 🎧 MinAudioBook Generator (VieNeu TTS)")
+    gr.Markdown("Chuyển đổi truyện chữ thành Audiobook sử dụng **VieNeu TTS** (Local, GPU). Hệ thống sẽ tự động chia truyện thành các tập dựa trên số lượng từ để tương ứng với thời lượng 5 tiếng mỗi tập.")
