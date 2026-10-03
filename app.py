@@ -138,3 +138,8 @@ with gr.Blocks(title="MinAudioBook Generator") as app:
         with gr.Column(scale=1):
             file_in = gr.File(label="Tải lên file truyện (.txt)")
             text_in = gr.Textbox(label="Hoặc dán nội dung truyện vào đây", lines=8, placeholder="Dán nội dung truyện...")
+            
+            with gr.Row():
+                voice_sel = gr.Dropdown(choices=VOICE_CHOICES, value=VOICE_CHOICES[0][1] if VOICE_CHOICES else None, label="Chọn giọng đọc", interactive=True)
+                words_per_ep = gr.Number(value=48000, label="Số từ mỗi tập (~5 tiếng)", interactive=True)
+                
