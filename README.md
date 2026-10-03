@@ -28,3 +28,8 @@ pip install torch==2.8.0 torchaudio==2.8.0 --index-url https://download.pytorch.
 pip install transformers==4.57.6
 pip install vieneu gradio pydub
 ```
+
+## Hướng dẫn sử dụng
+
+1. Mở PowerShell trong thư mục dự án.
+2. Kích hoạt môi trường ảo:
