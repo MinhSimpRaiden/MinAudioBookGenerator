@@ -83,3 +83,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
         progress((i) / total_episodes, desc=f"Đang tạo audio Tập {ep_num}/{total_episodes}...")
         
         # Batching: Vieneu hỗ trợ batch size, ta cắt các đoạn văn ra để đưa vào infer_batch
+        # Tuy nhiên nếu đoạn văn quá dài, infer_batch có thể out of memory. 
+        # Tạm thời gọi infer_batch cho toàn bộ tập (nếu RAM/VRAM đủ) hoặc chia thành các batch nhỏ.
+        ep_audios = []
+        batch_size = 32
+        
