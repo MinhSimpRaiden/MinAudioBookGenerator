@@ -28,3 +28,8 @@ def split_text_into_episodes(text, words_per_episode):
     """
     # Tách văn bản thành các đoạn nhỏ
     paragraphs = [p.strip() for p in text.split('\n') if p.strip()]
+    
+    episodes = []
+    current_episode_paragraphs = []
+    current_word_count = 0
+    
