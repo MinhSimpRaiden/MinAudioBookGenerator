@@ -53,3 +53,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
     if not tts:
         return "Lỗi: Chưa khởi tạo được VieNeu TTS. Hãy kiểm tra lại môi trường (GPU, Torch)."
         
+    text = ""
+    if file_obj is not None:
+        try:
+            with open(file_obj.name, 'r', encoding='utf-8') as f:
+                text = f.read()
