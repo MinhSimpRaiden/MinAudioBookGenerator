@@ -113,3 +113,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
                 out_path_mp3 = os.path.join(output_dir, f"Tap_{ep_num:02d}.mp3")
                 audio_seg.export(out_path_mp3, format="mp3", bitrate="128k")
                 # Nếu convert thành công, dùng file mp3 thay vì wav
+                output_files[-1] = out_path_mp3
+                # Tuỳ chọn xoá file wav để tiết kiệm dung lượng
+                os.remove(out_path_wav)
+            except Exception as e:
+                print(f"Không thể convert sang MP3 (có thể thiếu FFmpeg): {e}")
