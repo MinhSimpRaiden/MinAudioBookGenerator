@@ -73,3 +73,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
     
     episodes = split_text_into_episodes(text, words_per_ep)
     total_episodes = len(episodes)
+    
+    output_dir = "output_audiobooks"
+    os.makedirs(output_dir, exist_ok=True)
+    output_files = []
+    
