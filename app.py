@@ -108,3 +108,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
             output_files.append(out_path_wav)
             
             # Thử convert sang MP3 nếu hệ thống có FFmpeg (thông qua pydub)
+            try:
+                audio_seg = AudioSegment.from_wav(out_path_wav)
+                out_path_mp3 = os.path.join(output_dir, f"Tap_{ep_num:02d}.mp3")
+                audio_seg.export(out_path_mp3, format="mp3", bitrate="128k")
+                # Nếu convert thành công, dùng file mp3 thay vì wav
