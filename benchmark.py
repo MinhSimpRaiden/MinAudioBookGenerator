@@ -28,3 +28,8 @@ try:
     
     print(f"\n[KẾT QUẢ BENCHMARK TRÊN MÁY BẠN]")
     print(f"- Thời gian thực thi: {elapsed_time:.2f} giây")
+    print(f"- Thời lượng audio sinh ra: {audio_duration:.2f} giây")
+    print(f"- Hệ số RTF (Real-Time Factor): {rtf:.4f}")
+    print(f"- Tốc độ render: Nhanh gấp {1/rtf:.1f} lần tốc độ đọc của người thật")
+
+    # Ước tính cho tập 5 tiếng (18000 giây)
