@@ -123,3 +123,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
             
     progress(1.0, desc="Hoàn tất!")
     
+    msg = f"Đã hoàn thành! {total_episodes} tập đã được tạo và lưu tại thư mục `{os.path.abspath(output_dir)}`.\n\n"
+    for f in output_files:
+        msg += f"- {f}\n"
+        
+    return msg
