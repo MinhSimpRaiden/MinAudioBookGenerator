@@ -13,3 +13,8 @@ try:
     voices = tts.list_preset_voices()
     # Truyền cả cặp (label, voice_id) để Gradio hiển thị label nhưng trả về voice_id
     VOICE_CHOICES = voices
+    if not VOICE_CHOICES:
+        VOICE_CHOICES = [("Phạm Tuyên", "Phạm Tuyên"), ("Hải Đăng", "Hải Đăng"), ("Mai Anh", "Mai Anh")]
+    print(f"Đã tải thành công {len(VOICE_CHOICES)} giọng đọc.")
+except Exception as e:
+    print("Lỗi khi khởi tạo Vieneu:", e)
