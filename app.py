@@ -78,3 +78,8 @@ def process_audiobook(file_obj, text_input, voice_name, words_per_ep, progress=g
     os.makedirs(output_dir, exist_ok=True)
     output_files = []
     
+    for i, ep_paragraphs in enumerate(episodes):
+        ep_num = i + 1
+        progress((i) / total_episodes, desc=f"Đang tạo audio Tập {ep_num}/{total_episodes}...")
+        
+        # Batching: Vieneu hỗ trợ batch size, ta cắt các đoạn văn ra để đưa vào infer_batch
