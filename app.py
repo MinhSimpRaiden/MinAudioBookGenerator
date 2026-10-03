@@ -148,3 +148,8 @@ with gr.Blocks(title="MinAudioBook Generator") as app:
         with gr.Column(scale=1):
             out_msg = gr.Textbox(label="Trạng thái & Kết quả", lines=15, interactive=False)
             
+    btn.click(
+        fn=process_audiobook, 
+        inputs=[file_in, text_in, voice_sel, words_per_ep], 
+        outputs=[out_msg]
+    )
